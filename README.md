@@ -1,70 +1,56 @@
-## home24 Frontend Tech Task
+## Problem statement
 
-Owner|Type
----|---
-Front-End Chapter|Support
+This repository contains an application that, when running, will request data from our GraphQL server and render a basic product listing page. It's a simple page, with a header, sidebar, some articles and a footer. The task is to spend some time looking at how it is built and try to improve it by refactoring the code into something that you would be personally proud of
 
-### Welcome
+## Solution
 
-Welcome to the "take-home tech task". This repository contains an application that, when running, will request data from our GraphQL server and render a basic product listing page. It's a simple page, with a header, sidebar, some articles and a footer. Your task is to spend some time looking at how it is built and try to improve it by refactoring the code into something that you would be personally proud of.
+A Simple web app has been implemented using React-Redux as a Single Page Application. React takes care of the UI to render only when there is a change in the application state. Redux has been used to support the state management of the app so that data can be transmitted between all the components without any struggle. By combining React and Redux one can easily build a maintainable SPA and the solution implemented is production ready.
 
-### Current Code & Structure
+## Implementation details
 
-The application is split into two parts, the server and the client. This test is mainly focussing on the client aspect of the code, so try and work mainly in the client folder. All code is written in TypeScript with React as this is what we use at home24 daily.
+- The app has been created using 'create-react-app' which helps us to give a robust folder structure and configuration of the project
+- The routing mechanism has been implemented as part of this app. Currently, The following are the routes.
+  - Product list (http://localhost:3000/)
+  - Product details (http://localhost:3000/productDetails)
+  - Wishlist (http://localhost:3000/wishList)
+  - Shopping cart (http://localhost:3000/cart)
+  - Success (http://localhost:3000/success)
+- Product list route has all the products displayed on the page.
+- On the selection of products the Product details route is invoked to display the details
+- Material UI library has been used to have a rich google's material UI design for all our UI components.
+- The app works perfectly on all the mobile devices too.
+- All the error scenarios have been handled.
+- Basic unit testing has been writtened.
+- The app has a simple and clean folder structure so that it is easier to maintain when the app grows in future.
+- The app is production ready so when you build using npm run build, it will give you a minified production ready builds that can be deployed
 
-##### Server
+## How to run this App
 
-The server is a basic API endpoint for accessing live data. The server is built using express and a simple 5-minute cache to reduce the number of unnecessary calls being made while you work on the client. The server proxies all POST requests from `/graphql` to our public production GraphQL endpoint.
+- Clone the above mentioned repo and do 'npm install' in both client and server
+- After the successful installation, run 'npm start'
+- The app will start on localhost:3000 and the server will start on 3001
 
-##### Client
+## Application flow
 
-The client is a basic create-react-app application that renders a product listing page. The page itself shows 50 products from a specific product category. The code and UX could do with some improvement, we've worked hard to create it in a way that will allow you plenty of room to show off your skills and experience that you've gained working as a Frontend Engineer. Please take some time to look around and spot all the areas that you would like to improve. Remember, that when you are finished, you should be happy with your work.
+- When you hit http://localhost:3000/ you will land on the product list page where you can see a common app bar with a home button.
+- The app bar contains search, wishlist and shopping cart icons with functionality.
+- The sorting functionality has been added so that you can sort based on various criteria.
+- The search functionality has been added as a filter option in the product
+- You can add the product to a wishlist by clicking the favorite icon.
+- When you click on the product you will land on the /productDetails route where we can see the details of the product.
+- You can add the product to the cart by clicking the add to cart button.
+- If there is a 503 error then we will show the user nothing but an error message.
+- When you click on the wishlist icon in the header, you will be taken to the wish list page.
+- You will see an empty message when you don't have any item in the wishlist else you will see the particular product
+- The same behavior is applicable for shopping carts as well.
+- When you click on place your order button in the cart page, you will be taken to the thank you page.
+- When you hit another invalid route you will see a message with a button.
+- Clicking on the button will take you to the productList page
 
-If you find that you couldn't finish everything that you wanted to, then please make a note of them in the [TODO.md](TODO.md). Make sure to include what it was you wanted to do and why you wanted to do it.
+## Improvements needed
 
-### Getting up & running
-
-Both the server and client need to be installed and started.
-
-##### Server
-
-1) `cd server`
-2) `npm install`
-2) `npm start`
-
-##### Client
-
-1) `cd ../client`
-2) `npm install`
-2) `npm start`
-
-_Note: create-react-app should open your default browser at localhost to show the application working._
-
-### Tips
-
-We use the following technologies. Demonstrating how you would use these would make it easier for us to see how smooth your transition into the team might be:
-
-1) React with [Hooks](https://reactjs.org/docs/hooks-intro.html)
-2) [Jest](https://jestjs.io/)
-3) [Emotion.js](https://github.com/emotion-js/emotion) with [styled-system](https://styled-system.com/)
-4) [TypeScript](https://www.typescriptlang.org/)
-
-_Note: it's not compulsory to use these technologies but it does help the team process your submission faster. If you aren't familiar with some or all of these then please don't worry, use whatever you need to get the job done_
-
-### Finishing up
-
-Please make sure all your changes are included in your submission and that any new parts added to the application are documented so the team can easily see your hard work.
-
-Code can be submitted back to your recruiter as a zip file containing all the code (excluding both node_modules folders) or you can push your code to a public version control system and send us the link e.g. Github etc
-
-If you have any feedback or notes that you'd like to share with the team please add them to [NOTES.md](NOTES.md).
-
-### What to expect
-
-The team will review your submission and if everyone is happy with the work, we'll ask you to come in and meet us. Getting feedback on your submission can take anything between  3 - 5 working days.
-
-### Closing notes
-
-If you have any difficulty or something just isn't working as it should be, please let your recruiter know ASAP so we can support you.
-
-Thank you for applying to work at home24, we value and appreciate the time that you are spending on this. Good luck and have fun.
+- Unit test cases can be written to enhance the coverage to minute features as well provided with a time limit.
+- Error pages can be designed with more meaning. So, that users won't be frustrated with the server error.
+- Provided the database knowledge, graphql query can be improved so that we can show many info on details and cart pages.
+- Ratings details can be implemented provided with the time limit
+- Localization can be added if we have enough information

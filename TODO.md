@@ -1,0 +1,5 @@
+- Unit test cases can be written to enhance the coverage to minute features as well provided with a time limit.
+- Error pages can be designed with more meaning. So, that users won't be frustrated with the server error.
+- Provided the database knowledge, graphql query can be improved so that we can show many info on details and cart pages.
+- Ratings details can be implemented provided with the time limit
+- Localization can be added if we have enough information
