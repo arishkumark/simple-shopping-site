@@ -24,7 +24,7 @@ const Styles = () => ({
     justifyContent: 'center'
   },
   wrapper: {
-    marginTop: 20
+    marginTop: 100
   },
   sortingContainer: {
     paddingRight: '3%',

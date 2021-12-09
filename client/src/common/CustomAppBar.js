@@ -22,7 +22,7 @@ const CustomAppBar = ({ classes }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar classes={{ root: classes.appBarRoot }} position="static">
+      <AppBar classes={{ root: classes.appBarRoot }}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
             <IconButton disableRipple onClick={() => navigate('/')}>

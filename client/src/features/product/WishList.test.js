@@ -1,9 +1,5 @@
-import { render, screen, waitForElement } from '@testing-library/react';
-import {
-  Routes,
-  Route,
-  BrowserRouter
-} from "react-router-dom";
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
 import { store } from '../../app/store';
 import { Provider } from 'react-redux';

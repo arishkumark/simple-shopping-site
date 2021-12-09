@@ -33,7 +33,7 @@ const Styles = theme => ({
   },
   back: {
     paddingLeft: '3.334%',
-    marginTop: 30
+    marginTop: 97
   },
   imgContainer: {
     marginRight: 50
